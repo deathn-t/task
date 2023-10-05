@@ -9,3 +9,39 @@ h2{
     font-size: 2rem;
     color:#29c ;
 }
+header{
+    background-color: hsl(335,60%,50%);
+}
+main{
+    float:left;
+    width:65vw;
+    background-color: hsl(180,50%,60%);
+    height:60vh;
+}
+aside{
+    float:right;
+    width:25vw;
+    background-color: hsl(32, 86%, 43%);
+    height:60vh;
+}
+footer{
+    clear:both;
+    background-color: hsl(110,40%,30%);
+}
+.structural{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+}
+#para1{
+    color:rgb(67,165,184);
+}
+#para2{
+    color:rgb(167,65,184);
+}
+a:hover{
+    color:#84c
+}
+footer p{
+    font-size: 0.75em;
+}
