@@ -5,10 +5,11 @@ h1{
     font-size: 2.5rem;
 }
 html{
-
+    font:normal normal normal 20px/1.5 verdana, arial,helvetica,sans-serif;
 }
 body{
-    font:normal normal normal 12px/1.5 verdana, arial,helvetica,sans-serif;
+    display: flex;
+    flex-direction: column;
     height : 100vh;
     width: 100vh;
     background-color:hsl(10, 74%, 45%,0.5)
@@ -19,6 +20,10 @@ h2{
 }
 header{
     background-color: hsl(335,60%,50%);
+    flex: 1 10;
+}
+nav{
+    flex: 1 5%;
 }
 nav ul li{
     display:inline;
@@ -29,7 +34,7 @@ nav ul li a{
     color: indigo;
     background-color: cornsilk;
     text-decoration: none;
-    padding: 5px;
+    padding: 1em;
 }
 nav ul li a:hover{
     border: 2px solid cornsilk;
@@ -41,6 +46,8 @@ section{
     flex-direction: row;
     flex: 4 8%;
     flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
 }
 main{
     float:left;
@@ -62,8 +69,7 @@ aside a:hover{
 }
 
 aside{
-    float:right;
-    width:25vw;
+    flex: 1 2 30%;
     background-color: hsl(32, 86%, 43%);
     height:60vh;
 }
@@ -107,5 +113,33 @@ fieldset{
     border: none;
 }
 footer p{
+    flex: 1 5%;
     font-size: 0.75em;
+}
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+figure{
+    border: 2px soild black;
+}
+img{
+    width: 80%;
+    height: 80%;
+}
+@media (max-width: 1200px){
+    html{
+        font-size: 15px;
+    }
+
+}
+@media (max-width: 600px){
+    html{
+        font-size: 10px;
+    }
+    #gallery{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 }
